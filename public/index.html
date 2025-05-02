@@ -7,7 +7,17 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="chat-container">
+  <!-- Username Form -->
+  <div id="username-container" class="username-container">
+    <h1>Welcome to Chat App</h1>
+    <form id="username-form">
+      <input id="username-input" type="text" placeholder="Enter your username" autocomplete="off" required />
+      <button type="submit">Join Chat</button>
+    </form>
+  </div>
+
+  <!-- Chat Interface (hidden initially) -->
+  <div id="chat-container" class="chat-container" style="display: none;">
     <h1>Chat App</h1>
     <ul id="messages"></ul>
     <form id="form" action="">
@@ -16,9 +26,7 @@
     </form>
   </div>
 
-  <!-- Include Socket.IO client library -->
   <script src="/socket.io/socket.io.js"></script>
-  <!-- Include client-side JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
